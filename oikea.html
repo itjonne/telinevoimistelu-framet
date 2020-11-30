@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Telinevoimistelu-Demo</title>
+	<meta http-equiv="description" content="Telinevoimistelun Syventävät materiaalidemo" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="index.js" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="index.css" />
+	<script type="text/javascript">
+
+		totalFrames = 91; 
+
+		$(document).ready(function() {
+			initialize(); 
+		});
+
+	</script>
+</head>
+<body id='body' onload="initialize();" onresize="initialize();" onorientationchange="initialize();">
+	<span id="back">&#xab; Takaisin</span>
+	<h1 class="otsikko">Kiepin havainnollistaminen</h1>
+	<div id="header">
+		
+		<h2 id="text">Kieppi</h2>
+	</div>
+	<div id="screen">
+	<img id="video" src="./framet/oikea/ezgif-frame-001.jpg" alt="" />
+	<h2>&#x2190; Siirrä hiirtä ruudulla liikuttaaksesi videota &#x2192;</h2>
+	<p>
+		Tämä demoversio on tehty havainnollistamaan stoppivideoiden mahdollista käyttöä telinevoimistelun materiaaleissa.
+		Valitettavasti toimintoja ei ole optimoitu tableteille/puhelimille.
+	</p>
+	</div>
+	<script type="text/javascript">
+		for(i = 1; i <= totalFrames; i++) { 
+			images[i] =  new Image(); 
+			images[i].src = "./framet/oikea/ezgif-frame-"+pad(i, 3)+".jpg"; 
+		}
+
+		texts.push({"frame": 0, "text": "Kieppi"});
+		texts.push({"frame": 10, "text": "Harjoitellaan potkua, muista pitää kädet koukussa"});
+		texts.push({"frame": 40, "text": "Sitten itse liikkeeseen!"});
+		texts.push({"frame": 50, "text": "Muista pitää kädet koukussa, älä päästä päätä taakse"});
+		texts.push({"frame": 62, "text": "Sitten vain loppuojennus!"});
+		texts.push({"frame": 80, "text": "Nilkkaojennus, opettaja varmistaa pään asennon"});
+	</script>
+</body>
+</html>
