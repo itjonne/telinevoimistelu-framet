@@ -1,8 +1,4 @@
-
-var step = 1; // visible frame
-var targetStep = 1; // frame to animate to
-var images = new Array; // stores all of the frames for quick access
-var scrollPos; // scroll position of the window
+var images = new Array; 
 var totalFrames = 99; // the number of images in the sequence of JPEG files (this could be calculated server-side by scanning the frames folder)
 var xPosition = 0;
 var frame = 0;
